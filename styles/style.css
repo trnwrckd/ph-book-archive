@@ -4,7 +4,8 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #eaeaea;
+    background: linear-gradient(180deg , #fff9da , rgb(225, 255, 221));
+    background-attachment: fixed;
 }
 
 /* nav */
@@ -15,7 +16,7 @@ body{
     margin: 0;
     margin-left: 10px;
     text-shadow: -1px 0px 5px rgb(159, 126, 211);
-    letter-spacing: .25rem;
+    letter-spacing: .07rem;
     cursor: pointer;
     transition: all .5s;
 }
@@ -32,11 +33,12 @@ body{
     margin: 0 10px;
     font-weight: 500;
     border-radius: 5px;
+    background-color:white;
 }
 #search-input:focus{
     outline: 2px solid #94fcb3;
     color: black;
-    background-color: #fff4f0;
+    background-color: transparent;
 }
 #search-btn{
     border-radius: 5px;
@@ -60,6 +62,9 @@ body{
     z-index: -1;
     background-color: #f3c8b5;
     transition: all .5s;
+}
+#search-btn:hover{
+    border: 2px solid #4f8a80;
 }
 #search-btn:hover:before{
     border-radius: 0;
@@ -88,6 +93,10 @@ body{
 .card-img-top{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+.card-title{
+    color: rgb(1, 97, 97);
+    letter-spacing: .02rem;
 }
 
 
