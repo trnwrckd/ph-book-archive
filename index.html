@@ -11,10 +11,63 @@
     <!-- custom css -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Book Archive</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/favicon.png" alt="" width="40" height="40"
+                            class="d-inline-block align-text-top">
+                    </a>
+                    <a href="#">
+                        <h3 class="brand-text"> BOOK ARCHIVE</h3>
+                    </a>
+                </div>
 
+            </div>
+        </nav>
+    </header>
+
+    <main class="my-5">
+        <!-- search -->
+        <div class="text-center container">
+            <h2 class="fw-bold pb-3">Search for a book..</h2>
+            <div>
+                <input type="text" id="search-input" placeholder="Search..">
+                <button id="search-btn" onclick="loadAPI()">Submit</button>
+            </div>
+        </div>
+        <!-- spinner and no result -->
+        <div class="d-flex justify-content-center">
+            <!-- spinner -->
+            <div id="spinner" class="spinner-border text-primary my-5" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <!-- no results -->
+            <div id="no-result" class="text-center my-5">
+                <h2> Something went wrong</h2>
+                <h4> Please check if your input is valid.</h4>
+            </div>
+        </div>
+
+        <!-- results grid -->
+        <div id="search-results" class="container py-5">
+            <hr>
+            <h3 class="text-center pb-2"> Results for <span id="search-handle"></span></h3>
+            <div id="books-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
+
+            </div>
+            <h4 class="text-center py-5" id="num-results"></h4>
+        </div>
+
+    </main>
+
+    <!-- script -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,58 @@
+/* Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eaeaea;
+}
+
+/* nav */
+.brand-text{
+    display: inline-block;
+    color: #ddedff;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 10px;
+    text-shadow: -1px 0px 5px rgb(159, 126, 211);
+    letter-spacing: .25rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+.brand-text:hover{
+    color: #cbfdb1;
+    text-shadow: -1px 0px 3px rgb(128, 242, 250);
+}
+
+/* search */
+#search-input{
+    padding: 5px 15px;
+    border: 2px solid #64ada1;
+    margin: 0 10px;
+}
+input:focus{
+   outline: 2px solid #94fcb3;
+}
+#search-btn{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1em;
+    padding: 5px 25px;
+    border: 2px solid #64ada1;
+    background-color: #D3EBE7;
+}
+
+/* spinner */
+#spinner{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+/* no result */
+#no-result{
+    display: none;
+}
+/* search results */
+#search-results{
+    display: none;
+}
