@@ -19,7 +19,7 @@ const loadAPI = () => {
     const searchField = document.getElementById("search-input");
     const searchText = searchField.value;
     searchField.value = '';
-    const url = `http://openlibrary.org/search.json?q=${searchText}`;
+    const url = `https://openlibrary.org/search.json?q=${searchText}`;
     document.getElementById("search-handle").innerText = `"${searchText}"`
     // fetch 
     fetch(url).then(res => res.json()).then(data => displayData(data)).catch(error => console.log(error));
