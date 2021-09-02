@@ -36,6 +36,7 @@ body{
 }
 #search-input:focus{
     outline: 2px solid #94fcb3;
+    border-radius: 5px;
     color: black;
     background-color: transparent;
 }
