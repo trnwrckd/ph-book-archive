@@ -79,3 +79,8 @@ const displaySingleBook = (book) => {
 
     bookContainer.appendChild(div);
 }
+
+// scroll 
+const scrollToTop = () => {
+    window.scrollTo(0, 0);
+}

@@ -1,7 +1,6 @@
 /* Montserrat Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-
 body{
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(180deg , #fff9da , rgb(225, 255, 221));
@@ -75,9 +74,43 @@ body{
 /* spinner */
 #spinner{
     display: none;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    background:#c4f5aa;
+    border: 10px solid #008080;
+    border-top-color: #003333;
+    border-right-color: #14CCCC;
+    border-left-color: #CC8914;
+    border-bottom-color:#802F00;
+    border-radius: 50%;
+    position: relative;
+    animation: spinner 1.5s ease-in-out infinite;
 }
+#spinner:before{
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    top: 25%;
+    left: 25%;
+    border-radius: 50% ;
+    background: rgb(255, 255, 255);
+    animation: flip 1.5s ease-in-out infinite;
+}
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes flip{
+    50%{
+        transform: rotateX(360deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
 /* no result */
 #no-result{
     display: none;
@@ -88,7 +121,9 @@ body{
 }
 .card{
     border-radius: 15px;
-    border: none;
+}
+.card:hover{
+    background: transparent;
 }
 .card-img-top{
     border-top-left-radius: 15px;
