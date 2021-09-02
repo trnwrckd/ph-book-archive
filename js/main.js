@@ -19,6 +19,7 @@ const loadAPI = () => {
     const searchField = document.getElementById("search-input");
     const searchText = searchField.value;
     searchField.value = '';
+
     // NOTE TO EXAMINER - changed url to https because of mixed content error
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     document.getElementById("search-handle").innerText = `"${searchText}"`
@@ -49,7 +50,6 @@ const displayData = (data) => {
 // display single book
 const displaySingleBook = (book) => {
     // console.log(book);
-    const div = document.createElement("div");
     const noImageURL = "./images/no-image.png";
 
     // data cleaning
@@ -58,6 +58,9 @@ const displaySingleBook = (book) => {
     const authorName = (book.author_name !== undefined) ? book.author_name[0] : "Not found";
     const publisherName = (book.publisher !== undefined) ? book.publisher[0] : "Not found";
     const firstPublished = (book.first_publish_year !== undefined) ? book.first_publish_year : "Not found";
+
+    // div to append
+    const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
         <div class="card h-100 shadow">
